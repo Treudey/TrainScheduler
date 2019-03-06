@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+<body>
+  
+  <!--- Jumbotron -->
+  <div class="container-fluid">
+    <div class="row jumbotron text-center">
+      <div class="col-12">
+        <h1 class="display-2">Train Scheduler</h1>
+      </div>
+      <div class="col-12">
+        <h2 class="display-5">The train scheduling app of the future</h2>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Current Time</h4>
+      </div>
+      <div class="card-body">
+        <p class="display-3 text-center" id="current_time">14:40</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Current Train Schedule</h4>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Train Name</th>
+              <th>Destination</th>
+              <th>Frequency (mins)</th>
+              <th>Next Arrival</th>
+              <th>Minutes Away</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Trenton Express</td>
+              <td>Trenton</td>
+              <td>25</td>
+              <td>5:35PM</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Trenton Express</td>
+              <td>Trenton</td>
+              <td>25</td>
+              <td>5:35PM</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Trenton Express</td>
+              <td>Trenton</td>
+              <td>25</td>
+              <td>5:35PM</td>
+              <td>10</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Add Train</h4>
+        </div>
+        <div class="card-body">
+          <form id="train_form">
+            <div class="form-group">
+              <label for="train_form_name">Train Name</label>
+              <input type="text" class="form-control" id="train_form_name" placeholder="e.g. Orient Express">
+            </div>
+            <div class="form-group">
+              <label for="train_form_dest">Destination</label>
+              <input type="text" class="form-control" id="train_form_dest" placeholder="e.g. Toronto">
+            </div>
+            <div class="form-group">
+              <label for="train_form_time">First Train Time (military time)</label>
+              <input type="text" class="form-control" id="train_form_time" placeholder="e.g. 05:30">
+            </div>
+            <div class="form-group">
+              <label for="train_form_freq">Frequency (mins)</label>
+              <input type="text" class="form-control" id="train_form_freq" placeholder="e.g. 22">
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+
+  <script src="./assets/javascript/app.js"></script>
+</body>
+</html>

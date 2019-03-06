@@ -1,0 +1,15 @@
+body {
+    margin: 0 2rem;
+}
+
+.jumbotron,
+.card-header,
+.btn {
+    background-color: royalblue;
+    color: whitesmoke;
+}
+
+.card {
+    border-color: royalblue;
+    margin-bottom: 2.5rem;
+}
