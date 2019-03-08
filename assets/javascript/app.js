@@ -36,7 +36,7 @@ var trainDataController = (function() {
         },
         getDatabase: function() {
             return database;
-        }
+        },
     }
 })();
 
@@ -101,9 +101,7 @@ var UIController = (function() {
         clearTable: function() {
             document.querySelector(DOMstrings.tableBody).innerHTML = '';
         }
-
     }
-
 })();
 
 // Global App Controller
@@ -175,10 +173,8 @@ var controller = (function(trainCtrl, UICtrl) {
     }
 
     var ctrlAddTrain = function() {
-        var input, newTrain, convertedTrain;
-
         // 1. Get the field input data
-        input = UICtrl.getInput();
+        var input = UICtrl.getInput();
 
         // Check if valid inputs have been entered
         if (input.name !== '' && input.destination !== '' 
@@ -186,12 +182,9 @@ var controller = (function(trainCtrl, UICtrl) {
             && moment(input.firstTime, 'HH:mm').format('HH:mm') === input.firstTime) {
 
             // 2. Add data it to Firebase
-            newTrain = trainCtrl.addTrain(input.name, input.destination, input.firstTime, input.frequency)
+            trainCtrl.addTrain(input.name, input.destination, input.firstTime, input.frequency)
 
-            // 3. Calculate required information from train data and display it in the UI
-            //showTrainInfo(newTrain);
-
-            // 4. Clear the fields
+            // 3. Clear the fields
             UICtrl.clearFields();
         }
     }
